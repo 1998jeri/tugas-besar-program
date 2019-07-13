@@ -1,13 +1,13 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../configs/database');
 
-class SalesProduct extends Sequelize.Model {}
+class PeminjamanBuku extends Sequelize.Model {}
 
-SalesProduct.init({
+PeminjamanBuku.init({
   quantity: Sequelize.INTEGER,
   price: Sequelize.INTEGER
-}, { sequelize, modelName: 'sales_product' });
+}, { sequelize, modelName: 'peminjaman_buku' });
 	
 
   
-module.exports = SalesProduct;
+module.exports = PeminjamanBuku;
