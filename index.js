@@ -5,18 +5,18 @@ const bodyParser = require('body-parser');
 
 //Model
 
-const Product = require('./models/product');
-const Sales = require('./models/sales');
-const SalesProduct = require('./models/sales_product');
+const Buku = require('./models/buku');
+const Peminjaman = require('./models/peminjaman');
+const PeminjamanBuku = require('./models/peminjaman_buku');
 
 //Association Between Models
-Sales.hasMany(SalesProduct);
-SalesProduct.belongsTo(Product);
+Peminjaman.hasMany(PeminjamanBuku);
+PeminjamanBuku.belongsTo(Buku);
 
 
 //Router
 const homeRouter = require('./routes/home');
-const productRouter = require('./routes/product');
+const bukuRouter = require('./routes/buku');
 
 //Framework JS
 const app = express();
@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Gunakan Router
 app.use(homeRouter);
-app.use('/product',productRouter);
+app.use('/buku',bukuRouter);
 
 
 //Coba Koneksi Database
