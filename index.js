@@ -32,7 +32,7 @@ app.use(homeRouter);
 app.use('/buku',bukuRouter);
 
 
-//Coba Koneksi Database
+//Coba Koneksi Databasesss
 
 /*sequelize
  .authenticate()
